@@ -404,9 +404,13 @@
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction");
-    const AnalysisCount = displayWordCount("Analysis and discussion");
+    const ConclusionCount = displayWordCount("Conclusion");
+    const zeroCount = displayWordCount("Zero-Carbon Alternatives to Electric Vehicles");
+    const BEVCount = displayWordCount("The problems with battery-powered electric vehicles");
+    const BenefitsCount = displayWordCount("The benefits of battery-powered electric vehicles");
+    const DrawbacksCount = displayWordCount("What are the key drawbacks of petrol, diesel and the internal combustion engine?");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = IntroductionCount + ConclusionCount + zeroCount + BEVCount + BenefitsCount + DrawbacksCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
